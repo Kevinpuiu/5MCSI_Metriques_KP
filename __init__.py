@@ -38,7 +38,7 @@ def monhistograme():
 
 @app.route('/commits-data/')
 def commits_data():
-    url = 'https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits'
+    url = 'https://api.github.com/repos/Kevinpuiu/5MCSI_Metriques_KP/commits'
     response = urlopen(url)
     commits_data = json.loads(response.read().decode('utf-8'))
     
