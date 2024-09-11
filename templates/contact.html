@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire de Contact</title>
     <style>
-        /* Styles de base pour la page */
+        /* Styles de base pour la page avec l'image de fond */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
@@ -15,11 +15,15 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url('/templates/masseratti.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        /* Container du formulaire */
-        .form-container {
-            background-color: #fff;
+        /* Overlay pour rendre le formulaire lisible malgré le background */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8); /* Ajout d'un fond translucide */
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -84,7 +88,7 @@
 
         /* Style pour les petites tailles d'écran */
         @media (max-width: 600px) {
-            .form-container {
+            .overlay {
                 padding: 20px;
             }
         }
@@ -92,7 +96,7 @@
 </head>
 <body>
 
-    <div class="form-container">
+    <div class="overlay">
         <h2>Contactez-nous</h2>
         <form action="" method="post">
             <div class="form-group">
